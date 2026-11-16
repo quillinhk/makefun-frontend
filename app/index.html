@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A fast, lean frontend for make.fun: the live bounty board, bounty pages, leaderboards and public profiles, from make.fun's public API.">
+<title>make.fun — bounties, leaderboards, profiles</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/">make.fun<span> · lean client</span></a>
+  <nav aria-label="Sections">
+    <a href="#/">Board</a>
+    <a href="#/u/mumu-lin">Example profile</a>
+  </nav>
+  <form id="lookup" class="lookup" action="#/u/" method="get" role="search">
+    <label class="visually-hidden" for="handle">Look up a profile</label>
+    <input id="handle" name="handle" type="search" placeholder="handle, e.g. mumu-lin" autocomplete="off">
+    <button type="submit">Profile</button>
+  </form>
+</header>
+<main id="app" aria-live="polite"></main>
+<footer class="foot">
+  <p>Unofficial lean client. Data: <a href="https://make.fun/api/openapi.json">make.fun public API</a> (read-only, no sign-in). Source: this entry's repository.</p>
+</footer>
+</body>
+</html>
